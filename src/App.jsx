@@ -4,6 +4,7 @@ import Frameworks from './sections/frameworks';
 import Tools from './sections/tools';
 import ProgrammingLanguages from './sections/programming-languages';
 import Languages from './sections/languages';
+import Sidebar from './sections/sidebar';
 
 // Create styles
 const styles = StyleSheet.create({
@@ -25,9 +26,6 @@ export default function App () {
  return <PDFViewer width={'100%'} height={'100%'}>
   <Document>
       <Page size="A4" style={styles.page}>
-        <Container style={styles.header}>
-          <Text style={{fontSize: '32px'}}>Ruben Fileti</Text>
-        </Container>
         <View
           style={{
             display: 'flex',
@@ -38,7 +36,8 @@ export default function App () {
         >
           <View
             style={{
-              width: '66%'
+              width: '66%',
+              paddingTop: '32px'
             }}
           >
             <Frameworks></Frameworks>
@@ -50,8 +49,10 @@ export default function App () {
             style={{
               width: '34%',
               backgroundColor: '#f4fbff',
+              paddingTop: '32px'
             }}
           >
+            <Sidebar></Sidebar>
           </View>
         </View>
       </Page>

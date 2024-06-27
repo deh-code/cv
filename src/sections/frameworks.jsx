@@ -6,7 +6,7 @@ import { View } from "@react-pdf/renderer"
 
 export default function Frameworks() {
   return <Container>
-  <Section style={{marginTop: '32px'}}>
+  <Section>
     <Title>Frameworks</Title>
     <View style={{
       display: 'flex',
