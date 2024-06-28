@@ -1,8 +1,11 @@
 import { Image, Link, Text, View } from "@react-pdf/renderer";
 import Container from "../components/container";
-import profile from '../assets/profile.jpeg'
-import git from '../assets/github-mark.png';
-import linkedin from '../assets/LI-In-Bug.png'
+import profile from '../assets/images/profile.jpeg'
+import git from '../assets/images/github-mark.png';
+import linkedin from '../assets/images/LI-In-Bug.png'
+import { faEnvelope, faLocationDot, faMobileScreen } from "@fortawesome/free-solid-svg-icons";
+import Icon from "../components/icon";
+import Row from "../components/row";
 
 export default function Sidebar() {
   return <Container
@@ -16,10 +19,8 @@ export default function Sidebar() {
         marginBottom: '16px'
       }}
     >Ruben Fileti</Text>
-    <View
+    <Row
       style={{
-        display: 'flex',
-        flexDirection: 'row',
         alignItems: 'stretch',
         marginBottom: '16px'
       }}>
@@ -35,7 +36,7 @@ export default function Sidebar() {
       <View 
         style={{
           width: '50%',
-          paddingLeft: '6px'
+          paddingLeft: '6px',
         }}>
           <Text
             style={{
@@ -48,15 +49,33 @@ export default function Sidebar() {
               marginBottom: '12px'
             }}
           >Developer</Text>
-          <Text
+          <Row 
             style={{
               fontSize: '11px',
-              color: '#666',
-              fontStyle: 'italic'
-            }}>
-              Pisa, Italy
-            </Text>
+              color: '#666'
+            }}
+          >
+            <Icon fill='#666' width='10px' style={{marginRight: '2px'}} faIcon={faLocationDot}></Icon>
+            <Text>
+                Pisa, Italy
+              </Text>
+          </Row>
       </View>
+    </Row>
+    <View
+      style={{
+        marginBottom: '24px',
+        fontSize: '11px',
+        color: '#666'
+      }}>
+        <Row style={{marginBottom: '8px'}}>
+          <Icon fill='#666' width='10px' style={{marginRight: '3px'}} faIcon={faMobileScreen}></Icon>
+          <Text>+3899164109</Text>
+        </Row>
+        <Row>
+          <Icon fill='#666' width='10px' style={{marginRight: '3px'}} faIcon={faEnvelope}></Icon>
+          <Text>ruben.fileti.3@gmail.com</Text>
+        </Row>
     </View>
     <View
       style={{
@@ -74,10 +93,9 @@ export default function Sidebar() {
             fontSize: '11px',
             color: 'black',
             textDecoration: 'none',
-            marginBottom: '8px',
             marginRight: '16px',
           }}>
-          <Image style={{width: '18px', marginRight: '2px'}} src={git}/>
+          <Image style={{width: '14px', marginRight: '2px'}} src={git}/>
           <Text>GitHub</Text>
         </Link>
         <Link 
@@ -89,9 +107,8 @@ export default function Sidebar() {
             fontSize: '11px',
             color: 'black',
             textDecoration: 'none',
-            marginBottom: '12px'
           }}>
-          <Image style={{width: '18px', marginRight: '2px'}} src={linkedin}/>
+          <Image style={{width: '14px', marginRight: '2px'}} src={linkedin}/>
           <Text>LinkedIn</Text>
         </Link>
       </View>

@@ -5,7 +5,7 @@ export default function Chip({style = {}, children}) {
   return <View
   style={{
     padding: '4px 8px',
-    backgroundColor: '#818681',
+    backgroundColor: '#417E38',
     color: 'white',
     borderRadius: '4px',
     ...style

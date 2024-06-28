@@ -4,10 +4,7 @@ import PropTypes from 'prop-types'
 export default function Title({style = {}, children}) {
   return <Text
   style={{
-    marginBottom: '12px',
     fontSize: '18px',
-    borderBottom: '1px solid #eee',
-    paddingBottom: '4px',
     ...style
   }}>
     {children}
