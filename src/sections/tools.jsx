@@ -24,7 +24,7 @@ export default function Tools() {
           'Docker',
           'Git',
           'VS Code'
-        ].map((skill, index) => <Chip style={{ marginRight: '8px', marginBottom: '8px' }} key={index}>{skill}</Chip>)}
+        ].map((skill, index) => <Chip style={{ marginBottom: '8px' }} key={index}>{skill}</Chip>)}
       </Row>
     </Section>
   </Container>

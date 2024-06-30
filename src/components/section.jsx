@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 export default function Section({style = {}, children}) {
   return <View
   style={{
-    marginBottom: '48px',
+    marginBottom: '36px',
     ...style
   }}>
     {children}

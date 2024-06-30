@@ -7,6 +7,30 @@ import { faEnvelope, faLocationDot, faMobileScreen } from "@fortawesome/free-sol
 import Icon from "../components/icon";
 import Row from "../components/row";
 
+const links = [
+  {
+    href: 'https://github.com/deh-code',
+    title: 'GitHub',
+    icon: git
+  },
+  {
+    href: 'www.linkedin.com/in/ruben-fileti-423a221b2',
+    title: 'LinkedIn',
+    icon: linkedin
+  }
+]
+
+const contacts = [
+  {
+    text: '+3899164109',
+    icon: faMobileScreen
+  },
+  {
+    text: 'ruben.fileti.3@gmail.com',
+    icon: faEnvelope
+  },
+]
+
 export default function Sidebar() {
   return <Container
     style={{
@@ -15,7 +39,8 @@ export default function Sidebar() {
   >
     <Text
       style={{
-        fontSize: '32px',
+        fontSize: '28px',
+        fontWeight: 'bold',
         marginBottom: '16px'
       }}
     >Ruben Fileti</Text>
@@ -36,27 +61,33 @@ export default function Sidebar() {
       <View 
         style={{
           width: '50%',
-          paddingLeft: '6px',
+          paddingLeft: '6px'
         }}>
           <Text
             style={{
               fontSize: '15px',
+              fontWeight: 'semibold'
             }}
           >Fullstack</Text>
           <Text
             style={{
               fontSize: '15px',
-              marginBottom: '12px'
+              fontWeight: 'semibold',
             }}
           >Developer</Text>
           <Row 
             style={{
               fontSize: '11px',
-              color: '#666'
+              color: '#666',
+              marginTop: '16px'
             }}
           >
             <Icon fill='#666' width='10px' style={{marginRight: '2px'}} faIcon={faLocationDot}></Icon>
-            <Text>
+            <Text
+              style={{
+                fontStyle: 'italic',
+                fontWeight: 'medium'
+              }}>
                 Pisa, Italy
               </Text>
           </Row>
@@ -68,14 +99,12 @@ export default function Sidebar() {
         fontSize: '11px',
         color: '#666'
       }}>
-        <Row style={{marginBottom: '8px'}}>
-          <Icon fill='#666' width='10px' style={{marginRight: '3px'}} faIcon={faMobileScreen}></Icon>
-          <Text>+3899164109</Text>
-        </Row>
-        <Row>
-          <Icon fill='#666' width='10px' style={{marginRight: '3px'}} faIcon={faEnvelope}></Icon>
-          <Text>ruben.fileti.3@gmail.com</Text>
-        </Row>
+        {contacts.map((contact, index) => 
+          <Row key={index} style={{marginBottom: '8px'}}>
+            <Icon fill='#666' width='10px' style={{marginRight: '3px'}} faIcon={contact.icon}></Icon>
+            <Text>{contact.text}</Text>
+          </Row>
+        )}
     </View>
     <View
       style={{
@@ -83,34 +112,24 @@ export default function Sidebar() {
         flexDirection: 'row',
         flexWrap: 'wrap'
       }}>
-
-        <Link 
-          href="https://github.com/deh-code"
-          style={{
-            display: "flex",
-            flexDirection: 'row',
-            alignItems: 'center',
-            fontSize: '11px',
-            color: 'black',
-            textDecoration: 'none',
-            marginRight: '16px',
-          }}>
-          <Image style={{width: '14px', marginRight: '2px'}} src={git}/>
-          <Text>GitHub</Text>
-        </Link>
-        <Link 
-          href="www.linkedin.com/in/ruben-fileti-423a221b2"
-          style={{
-            display: "flex",
-            flexDirection: 'row',
-            alignItems: 'center',
-            fontSize: '11px',
-            color: 'black',
-            textDecoration: 'none',
-          }}>
-          <Image style={{width: '14px', marginRight: '2px'}} src={linkedin}/>
-          <Text>LinkedIn</Text>
-        </Link>
+        {links.map((link, index) =>  
+          <Link
+            key={index}
+            href={link.href}
+            style={{
+              display: "flex",
+              flexDirection: 'row',
+              alignItems: 'center',
+              fontSize: '11px',
+              fontWeight: 'medium',
+              color: 'black',
+              textDecoration: 'none',
+              marginRight: '16px',
+            }}>
+            <Image style={{width: '14px', marginRight: '2px'}} src={link.icon}/>
+            <Text>{link.title}</Text>
+          </Link>
+        )}
       </View>
   </Container>
 }

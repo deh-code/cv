@@ -23,9 +23,12 @@ export default function Frameworks() {
         'Express',
         'Next.js',
         'React',
-        'Spring',
-        'Wordpress'
-      ].map((skill, index) => <Chip style={{marginRight: '8px', marginBottom: '8px'}} key={index}>{skill}</Chip>)}
+      ].map((skill, index) => 
+        <Chip 
+          style={{
+            marginBottom: '8px'
+          }} 
+          key={index}>{skill}</Chip>)}
     </Row>
   </Section>
 </Container>

@@ -8,11 +8,13 @@ export default function Chip({style = {}, children}) {
     backgroundColor: '#417E38',
     color: 'white',
     borderRadius: '4px',
+    fontWeight: 'medium',
+    marginRight: '6px',
     ...style
   }}>
     <Text
       style={{
-        fontSize: '12px'
+        fontSize: '14px',
       }}
     >
       {children}

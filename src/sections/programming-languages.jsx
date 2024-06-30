@@ -15,19 +15,17 @@ export default function ProgrammingLanguages() {
         paddingBottom: '4px',
       }}>
         <Icon faIcon={faCode} width='16px' style={{ marginRight: '8px' }}></Icon>
-        <Title>Programming/Markup Languages</Title>
+        <Title>Programming Languages</Title>
       </Row>
       <Row>
         {[
           'Javascript',
           'Typescript',
-          'Java',
-          'PHP',
           'Python',
           'HTML',
           'CSS/SASS',
           'Pug'
-        ].map((skill, index) => <Chip style={{ marginRight: '8px', marginBottom: '8px' }} key={index}>{skill}</Chip>)}
+        ].map((skill, index) => <Chip style={{ marginBottom: '8px' }} key={index}>{skill}</Chip>)}
       </Row>
     </Section>
   </Container>
