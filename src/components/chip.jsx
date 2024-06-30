@@ -9,7 +9,6 @@ export default function Chip({style = {}, children}) {
     color: 'white',
     borderRadius: '4px',
     fontWeight: 'medium',
-    marginRight: '6px',
     ...style
   }}>
     <Text

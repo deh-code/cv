@@ -1,8 +1,4 @@
 import { Page, Document, StyleSheet, PDFViewer, View, Font } from '@react-pdf/renderer';
-import Frameworks from './sections/frameworks';
-import Tools from './sections/tools';
-import ProgrammingLanguages from './sections/programming-languages';
-import Languages from './sections/languages';
 import Sidebar from './sections/sidebar';
 import Row from './components/row';
 
@@ -18,6 +14,7 @@ import openSansExtraBoldItalic from './assets/fonts/open-sans/OpenSans-ExtraBold
 import openSansExtraBold from './assets/fonts/open-sans/OpenSans-ExtraBold.ttf';
 import openSansBoldItalic from './assets/fonts/open-sans/OpenSans-BoldItalic.ttf';
 import openSansBold from './assets/fonts/open-sans/OpenSans-Bold.ttf';
+import Skills from './sections/skills';
 
 // Create styles
 const styles = StyleSheet.create({
@@ -118,10 +115,7 @@ export default function App () {
               paddingTop: '32px'
             }}
           >
-            <Frameworks></Frameworks>
-            <Tools></Tools>
-            <ProgrammingLanguages></ProgrammingLanguages>
-            <Languages></Languages>
+            <Skills></Skills>
           </View>
           <View
             style={{

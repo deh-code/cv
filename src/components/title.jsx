@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 export default function Title({style = {}, children}) {
   return <Text
   style={{
-    fontSize: '20px',
+    fontSize: '16px',
     fontWeight: 'bold',
     ...style
   }}>
