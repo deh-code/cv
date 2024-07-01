@@ -7,6 +7,7 @@ import { faEnvelope, faLocationDot, faMobileScreen } from "@fortawesome/free-sol
 import Icon from "../components/Icon";
 import Row from "../components/Row";
 import Education from "./Education";
+import Languages from "./Languages";
 
 const links = [
   {
@@ -137,15 +138,15 @@ export default function Sidebar() {
     </View>
     <View
       style={{
-        marginBottom: '16px'
+        marginBottom: '20px'
       }}>
       <Education></Education>
     </View>
     <View
       style={{
-        marginBottom: '16px'
+        marginBottom: '20px'
       }}>
-      <Education></Education>
+      <Languages></Languages>
     </View>
   </Container>
 }

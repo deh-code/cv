@@ -4,7 +4,7 @@ import Title from "../components/Title"
 import Chip from "../components/Chip"
 import Row from "../components/Row"
 import Icon from "../components/Icon"
-import { faCode, faGears, faGlobeAmericas, faScrewdriverWrench, faStar } from "@fortawesome/free-solid-svg-icons"
+import { faBook, faCode, faGears, faScrewdriverWrench, faStar } from "@fortawesome/free-solid-svg-icons"
 import { View } from "@react-pdf/renderer"
 
 const skills = [
@@ -43,11 +43,13 @@ const skills = [
     ]
   },
   {
-    title: 'Languages',
-    icon: faGlobeAmericas,
+    title: 'Concepts',
+    icon: faBook,
     items: [
-      'Italian (native)',
-      'English (B2)'
+      'API REST',
+      'MVC',
+      'Auth/Sanification',
+      'HTTP Protocol'
     ]
   },
 ]
