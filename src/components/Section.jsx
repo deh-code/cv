@@ -1,8 +1,8 @@
 import { View } from "@react-pdf/renderer"
 import PropTypes from 'prop-types'
-import Title from "./title"
-import Row from "./row"
-import Icon from "./icon"
+import Title from "./Title"
+import Row from "./Row"
+import Icon from "./Icon"
 
 export default function Section({ style = {}, title, icon, iconWidth = '20px', children }) {
   return <View

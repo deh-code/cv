@@ -1,8 +1,8 @@
 import { faFileCode } from "@fortawesome/free-solid-svg-icons";
-import Container from "../components/container";
-import Section from '../components/section';
+import Container from "../components/Container";
+import Section from '../components/Section';
 import { Link, Text, View } from "@react-pdf/renderer";
-import Title from "../components/title";
+import Title from "../components/Title";
 
 const projects = [
   {

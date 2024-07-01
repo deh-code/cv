@@ -1,8 +1,8 @@
 import { faBuilding } from "@fortawesome/free-solid-svg-icons";
-import Container from "../components/container";
-import Section from "../components/section";
+import Container from "../components/Container";
+import Section from "../components/Section";
 import { Link, Text, View } from "@react-pdf/renderer";
-import Row from "../components/row";
+import Row from "../components/Row";
 
 const experiences = [
   {

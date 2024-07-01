@@ -1,6 +1,6 @@
 import { Page, Document, StyleSheet, PDFViewer, View, Font } from '@react-pdf/renderer';
-import Sidebar from './sections/sidebar';
-import Row from './components/row';
+import Sidebar from './sections/Sidebar';
+import Row from './components/Row';
 
 import openSansSemiBoldItalic from './assets/fonts/open-sans/OpenSans-SemiBoldItalic.ttf';
 import openSansSemiBold from './assets/fonts/open-sans/OpenSans-SemiBold.ttf';
@@ -14,9 +14,9 @@ import openSansExtraBoldItalic from './assets/fonts/open-sans/OpenSans-ExtraBold
 import openSansExtraBold from './assets/fonts/open-sans/OpenSans-ExtraBold.ttf';
 import openSansBoldItalic from './assets/fonts/open-sans/OpenSans-BoldItalic.ttf';
 import openSansBold from './assets/fonts/open-sans/OpenSans-Bold.ttf';
-import Skills from './sections/skills';
-import Experiences from './sections/experiences';
-import PersonalProjects from './sections/personal-projects';
+import Skills from './sections/Skills';
+import Experiences from './sections/Experiences';
+import PersonalProjects from './sections/PersonalProjects';
 
 // Create styles
 const styles = StyleSheet.create({
