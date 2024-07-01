@@ -12,14 +12,10 @@ const experiences = [
     },
     role: 'Fullstack Web Developer',
     period: '2022/04 - Now',
-    description: 'As a Full Stack Developer, I had to manage the entire project lifecycle, from selecting the database to designing REST APIs.',
-    tasks: [
-      'React WebApps with UI libraries (bootstrap, Material UI)',
-      'Static Websites and JS bundles (Webpack, Gulp)',
-      'Backend frameworks (Node.js, Spring Boot, Wordpress)',
-      'Security and authentication issues (JWT, input sanification)',
-      'Data storage (MySQL)',
-      'Containerization and deployment (Docker, SSH, NGINX)'
+    descriptions: [
+      'As a Full Stack Developer, I had to manage the entire project lifecycle, from designing REST APIs to the development of the UI.',
+      'I used to work in small/medium teams, coordinating with my colleagues with Trello and Gitlab\'s issue board.',
+      'I proposed university internships for my company and followed interns until they were hired.'
     ]
   }
 ]
@@ -81,31 +77,16 @@ export default function Experiences() {
               fontWeight: 'medium',
               fontSize: '9px'
             }}>
-            <Text
-              style={{
-                marginBottom: '4px'
-              }}>
-              {experience.description}
-            </Text>
-            <View>
-              <Text
-                style={{
-                  marginBottom: '2px'
-                }}>
-                Expierence I gained:  
-              </Text>
-              {experience.tasks.map((task, index) =>
-                <Row
+              {experience.descriptions.map((description, index) => 
+                <Text
                   key={index}
                   style={{
-                    marginBottom: '2px',
+                    marginBottom: '4px'
                   }}>
-                  <Text style={{marginRight: '8px'}}>-</Text>
-                  <Text>{task}</Text>
-                </Row>
+                  {description}
+                </Text>
               )}
-            </View>
-
+            
           </View>
         </View>)}
 

@@ -48,8 +48,10 @@ const skills = [
     items: [
       'API REST',
       'MVC',
-      'Auth/Sanification',
-      'HTTP Protocol'
+      'Auth',
+      'Sanification',
+      'HTTP',
+      'SSH'
     ]
   },
 ]
