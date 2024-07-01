@@ -3,60 +3,73 @@ import { faGraduationCap, faLocationDot } from "@fortawesome/free-solid-svg-icon
 import Icon from "../components/Icon";
 import Row from "../components/Row";
 import Title from "../components/Title";
+import useLocalization from "../hooks/localization";
+import sections from "../data/sections";
+import educations from "../data/educations";
 
 export default function Education() {
+  const l = useLocalization();
+
   return <View>
-  <Row>
-    <Icon
-      faIcon={faGraduationCap}
-      style={{
-        marginRight: '4px'
-      }}></Icon>
-    <Title
-      style={{
-        fontSize: '14px',
-        marginBottom: '8px'
-      }}>
-      Education
-    </Title>
-    <Row
-      style={{
-        fontSize: '9px',
-        marginBottom: '4px'
-      }}>
-      <Text
-        style={{
-          fontWeight: 'bold'
-        }}>
-        Bachelor&apos;s degree
-      </Text>
-      <Text style={{ marginHorizontal: '2px' }}>-</Text>
-      <Text
-        style={{
-          fontWeight: 'bold',
-          fontStyle: 'italic'
-        }}>
-        Computer Science
-      </Text>
-    </Row>
     <Row>
       <Icon
-        faIcon={faLocationDot}
-        width='8px'
-        fill='#666'
+        faIcon={faGraduationCap}
         style={{
-          marginRight: '2px'
+          marginRight: '4px'
         }}></Icon>
-      <Text
+      <Title
         style={{
-          fontWeight: 'semibold',
-          fontSize: '9px',
-          color: '#666',
-          fontStyle: 'italic'
+          fontSize: '14px',
+          marginBottom: '8px'
         }}>
-        University of Pisa
-      </Text>
+        {l(sections.education)}
+      </Title>
+      <View>
+        {educations.map((education, index) =>
+          <View
+            key={index}>
+            <Row
+              style={{
+                fontSize: '9px',
+                marginBottom: '4px'
+              }}>
+              <Text
+                style={{
+                  fontWeight: 'bold'
+                }}>
+                {l(education.title)}
+              </Text>
+              <Text style={{ marginHorizontal: '2px' }}>-</Text>
+              <Text
+                style={{
+                  fontWeight: 'bold',
+                  fontStyle: 'italic'
+                }}>
+                {l(education.subject)}
+              </Text>
+            </Row>
+            <Row>
+              <Icon
+                faIcon={faLocationDot}
+                width='8px'
+                fill='#666'
+                style={{
+                  marginRight: '2px'
+                }}></Icon>
+              <Text
+                style={{
+                  fontWeight: 'semibold',
+                  fontSize: '9px',
+                  color: '#666',
+                  fontStyle: 'italic'
+                }}>
+                {l(education.location)}
+              </Text>
+            </Row>
+          </View>
+        )}
+      </View>
+
     </Row>
-  </Row>
-</View>
+  </View>
 }

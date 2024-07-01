@@ -3,19 +3,13 @@ import Row from "../components/Row";
 import Icon from "../components/Icon";
 import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons";
 import Title from "../components/Title";
-
-const languages = [
-  {
-    name: 'Italian',
-    level: 'native'
-  },
-  {
-    name: 'English',
-    level: 'B2'
-  }
-]
+import useLocalization from "../hooks/localization";
+import sections from "../data/sections";
+import languages from "../data/languages";
 
 export default function Languages() {
+  const l = useLocalization();
+
   return <View
     style={{
       fontSize: '9px'
@@ -31,7 +25,7 @@ export default function Languages() {
           fontSize: '14px',
           marginBottom: '12px'
         }}>
-        Languages
+        {l(sections.languages)}
       </Title>
     </Row>
     <Row>
@@ -49,7 +43,7 @@ export default function Languages() {
               marginRight: '8px',
               fontWeight: 'bold'
             }}>
-            <Text >{language.name}: </Text>
+            <Text >{l(language.name)}: </Text>
           </View>
         )}
       </View>
@@ -61,7 +55,7 @@ export default function Languages() {
               marginBottom: '2px',
               fontWeight: 'semibold'
             }}>
-            <Text style={{ fontStyle: 'italic' }}>{language.level}</Text>
+            <Text style={{ fontStyle: 'italic' }}>{l(language.level)}</Text>
           </View>
         )}
       </View>

@@ -1,4 +1,4 @@
-import { Page, Document, StyleSheet, PDFViewer, View, Font } from '@react-pdf/renderer';
+import { Page, Document, StyleSheet, PDFViewer, View, Font, Text } from '@react-pdf/renderer';
 import Sidebar from './sections/Sidebar';
 import Row from './components/Row';
 
@@ -17,6 +17,8 @@ import openSansBold from './assets/fonts/open-sans/OpenSans-Bold.ttf';
 import Skills from './sections/Skills';
 import Experiences from './sections/Experiences';
 import PersonalProjects from './sections/PersonalProjects';
+import { useContext } from 'react';
+import { LocaleContext } from './App';
 
 // Create styles
 const styles = StyleSheet.create({
@@ -30,11 +32,11 @@ const styles = StyleSheet.create({
     paddingVertical: '24px',
     color: 'white',
   }
-  
+
 });
 
-Font.register({ 
-  family: 'openSans', 
+Font.register({
+  family: 'openSans',
   fonts: [
     {
       src: openSansSemiBoldItalic,
@@ -100,37 +102,41 @@ Font.register({
 })
 
 export default function CV() {
+  const locale = useContext(LocaleContext);
+
   return <PDFViewer width={'100%'} height={'100%'}>
-  <Document>
-      <Page size="A4" style={styles.page}>
-        <Row
-          style={{
-            alignItems: 'stretch',
-            flexGrow: '1',
-            flexWrap: 'nowrap',
-          }}
-        >
-          <View
+    <Document>
+      <LocaleContext.Provider value={locale}>
+        <Page size="A4" style={styles.page}>
+          <Row
             style={{
-              width: '66%',
-              paddingTop: '12px'
+              alignItems: 'stretch',
+              flexGrow: '1',
+              flexWrap: 'nowrap',
             }}
           >
-            <Skills></Skills>
-            <Experiences></Experiences>
-            <PersonalProjects></PersonalProjects>
-          </View>
-          <View
-            style={{
-              width: '34%',
-              backgroundColor: '#f4fbff',
-              paddingTop: '12px'
-            }}
-          >
-            <Sidebar></Sidebar>
-          </View>
-        </Row>
-      </Page>
+            <View
+              style={{
+                width: '66%',
+                paddingTop: '12px'
+              }}
+            >
+              <Skills></Skills>
+              <Experiences></Experiences>
+              <PersonalProjects></PersonalProjects>
+            </View>
+            <View
+              style={{
+                width: '34%',
+                backgroundColor: '#f4fbff',
+                paddingTop: '12px'
+              }}
+            >
+              <Sidebar></Sidebar>
+            </View>
+          </Row>
+        </Page>
+      </LocaleContext.Provider>
     </Document>
-</PDFViewer>;
+  </PDFViewer>;
 }

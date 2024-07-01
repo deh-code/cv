@@ -3,31 +3,20 @@ import Container from "../components/Container";
 import Section from "../components/Section";
 import { Link, Text, View } from "@react-pdf/renderer";
 import Row from "../components/Row";
-
-const experiences = [
-  {
-    company: {
-      name: 'Inera srl',
-      link: 'https://www.inera.it/'
-    },
-    role: 'Fullstack Web Developer',
-    period: '2022/04 - Now',
-    descriptions: [
-      'As a Full Stack Developer, I had to manage the entire project lifecycle, from designing REST APIs to the development of the UI.',
-      'I used to work in small/medium teams, coordinating with my colleagues with Trello and Gitlab\'s issue board.',
-      'I proposed university internships for my company and followed interns until they were hired.'
-    ]
-  }
-]
+import useLocalization from "../hooks/localization";
+import sections from "../data/sections";
+import workingExperiences from "../data/working-experiences";
 
 export default function Experiences() {
+  const l = useLocalization();
+
   return <Container>
     <Section
-      title='Working Experiences'
+      title={l(sections.workingExperiences)}
       icon={faBuilding}
       iconWidth="14px">
 
-      {experiences.map((experience, index) => 
+      {workingExperiences.map((experience, index) => 
         <View 
           key={index}
           style={{
@@ -43,9 +32,9 @@ export default function Experiences() {
                 fontWeight: 'bold',
                 fontSize: '12px'
               }}>
-              {experience.role}
+              {l(experience.role)}
             </Text>
-            <Text> at </Text>
+            <Text style={{margin: '0 2px 0 4px', fontWeight: 'bold'}}> - </Text>
             <Link
               href={experience.company.link}
               style={{
@@ -69,7 +58,7 @@ export default function Experiences() {
               color: '#666',
               marginBottom: '8px'
             }}>
-            {experience.period}
+            {l(experience.period)}
           </Text>
           <View
             style={{
@@ -77,7 +66,7 @@ export default function Experiences() {
               fontWeight: 'medium',
               fontSize: '9px'
             }}>
-              {experience.descriptions.map((description, index) => 
+              {l(experience.descriptions).map((description, index) => 
                 <Text
                   key={index}
                   style={{

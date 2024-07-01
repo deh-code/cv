@@ -3,41 +3,28 @@ import Container from "../components/Container";
 import Section from '../components/Section';
 import { Link, Text, View } from "@react-pdf/renderer";
 import Title from "../components/Title";
-
-const projects = [
-  {
-    title: 'CV',
-    link: 'https://github.com/deh-code/cv',
-    description: 'The CV you are reading right now is actually a React WebApp compiled to a pdf with the react-pdf library.' 
-  },
-  {
-    title: 'Generator Yeogurt 2',
-    link: 'https://github.com/deh-code/generator-yeogurt-2',
-    description: 'An old static site generator based on gulp and browserify, that I forked. It was no longer receiving updates, still it was used in some of my company\'s older projects, so I had to do some optimizations in order to maintain those ones.'
-  },
-  {
-    title: 'Pagami (work in progress)',
-    link: 'https://github.com/orgs/deh-code-pagami/repositories',
-    description: 'A React WebApp for debt tracking, it uses Strapi CMS for backend and a MySQL database. The repository is splitted in 2 modules (frontend and backend) that can be shipped separately and orchestrated with Docker and NGINX.'
-  }
-]
+import useLocalization from "../hooks/localization";
+import sections from "../data/sections";
+import personalProjects from "../data/personal-projects";
 
 export default function PersonalProjects() {
+  const l = useLocalization();
+
   return <Container>
     <Section
-      title='Personal Projects'
+      title={l(sections.personalProjects)}
       icon={faFileCode}
       iconWidth="14px">
       <View
         style={{
           fontSize: '9px'
         }}>
-        {projects.map((project, index) => 
+        {personalProjects.map((project, index) => 
           <View
             style={{
               padding: '6px',
               backgroundColor: index % 2 === 0 ? '#fffff6' : '#f4fbff',
-              borderBottom: index === projects.length - 1 ? 'none' : '1px solid #eee'
+              borderBottom: index === personalProjects.length - 1 ? 'none' : '1px solid #eee'
             }}
             key={index}>
             <Link 
@@ -55,7 +42,7 @@ export default function PersonalProjects() {
             </Link>
             <View>
               <Text>
-                {project.description}
+                {l(project.description)}
               </Text>
             </View>
           </View>

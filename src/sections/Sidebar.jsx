@@ -2,12 +2,13 @@ import { Image, Link, Text, View } from "@react-pdf/renderer";
 import Container from "../components/Container";
 import git from '../assets/images/github-mark.png';
 import linkedin from '../assets/images/LI-In-Bug.png'
-import { faEnvelope, faLocationDot, faMobileScreen } from "@fortawesome/free-solid-svg-icons";
 import Icon from "../components/Icon";
 import Row from "../components/Row";
 import Education from "./Education";
 import Languages from "./Languages";
 import Bio from "./Bio";
+import contacts from "../data/contacts";
+import useLocalization from "../hooks/localization";
 
 const links = [
   {
@@ -22,22 +23,8 @@ const links = [
   }
 ]
 
-const contacts = [
-  {
-    text: 'Pisa, Italy',
-    icon: faLocationDot
-  },
-  {
-    text: '+3899164109',
-    icon: faMobileScreen
-  },
-  {
-    text: 'ruben.fileti.3@gmail.com',
-    icon: faEnvelope
-  },
-]
-
 export default function Sidebar() {
+  const l = useLocalization();
   return <Container
     style={{
       paddingHorizontal: '12px'
@@ -80,7 +67,7 @@ export default function Sidebar() {
         {contacts.map((contact, index) =>
           <Row key={index} style={{ marginBottom: '8px' }}>
             <Icon fill='#666' width='10px' style={{ marginRight: '3px' }} faIcon={contact.icon}></Icon>
-            <Text>{contact.text}</Text>
+            <Text>{l(contact.text)}</Text>
           </Row>
         )}
       </View>

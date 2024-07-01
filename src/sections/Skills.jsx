@@ -4,63 +4,19 @@ import Title from "../components/Title"
 import Chip from "../components/Chip"
 import Row from "../components/Row"
 import Icon from "../components/Icon"
-import { faBook, faCode, faGears, faScrewdriverWrench, faStar } from "@fortawesome/free-solid-svg-icons"
+import { faStar } from "@fortawesome/free-solid-svg-icons"
 import { View } from "@react-pdf/renderer"
-
-const skills = [
-  {
-    title: 'Frameworks',
-    icon: faGears,
-    iconWidth: '22px',
-    items: [
-      'Node.js',
-      'Express',
-      'Next.js',
-      'React',
-    ]
-  },
-  {
-    title: 'Tools',
-    icon: faScrewdriverWrench,
-    items: [
-      'npm/yarn/pnpm',
-      'MySQL',
-      'Docker',
-      'Git',
-      'VS Code'
-    ]
-  },
-  {
-    title: 'Program Langs',
-    icon: faCode,
-    items: [
-      'Javascript',
-      'Typescript',
-      'Python',
-      'HTML',
-      'CSS/SASS',
-      'Pug'
-    ]
-  },
-  {
-    title: 'Concepts',
-    icon: faBook,
-    items: [
-      'API REST',
-      'MVC',
-      'Auth',
-      'Sanification',
-      'HTTP',
-      'SSH'
-    ]
-  },
-]
+import skills from "../data/skills"
+import useLocalization from "../hooks/localization"
+import sections from "../data/sections"
 
 export default function Skills() {
+  const l = useLocalization();
+
   return <Container>
   <Section
     icon={faStar}
-    title='Skills'>
+    title={l(sections.skills)}>
     <Row 
       style={{
         alignItems: 'start'
@@ -82,7 +38,7 @@ export default function Skills() {
               paddingBottom: '4px',
             }}>
               <Icon faIcon={skill.icon} width={skill.iconWidth || '16px'} style={{ marginRight: '8px' }}></Icon>
-              <Title style={{fontStyle: 'italic', fontSize: '14px'}}>{skill.title}</Title>
+              <Title style={{fontStyle: 'italic', fontSize: '14px'}}>{l(skill.title)}</Title>
             </Row>
             <Row>
               {skill.items.map((item, index) => <Chip key={index} style={{margin: '0 6px 6px 0'}}>{item}</Chip>)}
