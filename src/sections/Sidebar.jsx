@@ -1,6 +1,5 @@
 import { Image, Link, Text, View } from "@react-pdf/renderer";
 import Container from "../components/Container";
-import profile from '../assets/images/profile.jpeg'
 import git from '../assets/images/github-mark.png';
 import linkedin from '../assets/images/LI-In-Bug.png'
 import { faEnvelope, faLocationDot, faMobileScreen } from "@fortawesome/free-solid-svg-icons";
@@ -25,6 +24,10 @@ const links = [
 
 const contacts = [
   {
+    text: 'Pisa, Italy',
+    icon: faLocationDot
+  },
+  {
     text: '+3899164109',
     icon: faMobileScreen
   },
@@ -46,63 +49,28 @@ export default function Sidebar() {
         paddingBottom: '16px',
         marginBottom: '16px'
       }}>
-      <Text
+      <View
         style={{
-          fontSize: '28px',
-          fontWeight: 'bold',
-          marginBottom: '16px'
-        }}
-      >Ruben Fileti</Text>
-      <Row
-        style={{
-          alignItems: 'stretch',
-          marginBottom: '16px'
+          marginBottom: '20px'
         }}>
-        <View
+        <Text
           style={{
-            width: '50%',
-            paddingRight: '6px'
-          }}>
-          <Image src={profile} style={{
-            borderRadius: '8px'
-          }}></Image>
-        </View>
-        <View
+            fontSize: '28px',
+            fontWeight: 'bold',
+            marginBottom: '0px'
+          }}
+        >
+          Ruben Fileti
+        </Text>
+        <Text
           style={{
-            width: '50%',
-            paddingLeft: '6px'
+            fontSize: '12px',
+            fontWeight: 'semibold',
+            fontStyle: 'italic'
           }}>
-          <Text
-            style={{
-              fontSize: '15px',
-              fontWeight: 'semibold'
-            }}
-          >Fullstack</Text>
-          <Text
-            style={{
-              fontSize: '15px',
-              fontWeight: 'semibold',
-            }}
-          >Developer</Text>
-          <Row
-            style={{
-              fontSize: '11px',
-              color: '#666',
-              marginTop: '16px'
-            }}
-          >
-            <Icon fill='#666' width='8px' style={{ marginRight: '2px' }} faIcon={faLocationDot}></Icon>
-            <Text
-              style={{
-                fontStyle: 'italic',
-                fontWeight: 'medium',
-                fontSize: '10px'
-              }}>
-              Pisa, Italy
-            </Text>
-          </Row>
-        </View>
-      </Row>
+          Fullstack Developer
+        </Text>
+      </View>
       <View
         style={{
           marginBottom: '10px',

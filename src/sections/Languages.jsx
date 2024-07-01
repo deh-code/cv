@@ -59,7 +59,7 @@ export default function Languages() {
             key={index}
             style={{
               marginBottom: '2px',
-              fontWeight: 'bold'
+              fontWeight: 'semibold'
             }}>
             <Text style={{ fontStyle: 'italic' }}>{language.level}</Text>
           </View>

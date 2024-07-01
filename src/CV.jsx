@@ -39,7 +39,7 @@ Font.register({
     {
       src: openSansSemiBoldItalic,
       fontStyle: 'italic',
-      fontWeight: 'bold',
+      fontWeight: 'semibold',
     },
     {
       src: openSansSemiBold,
