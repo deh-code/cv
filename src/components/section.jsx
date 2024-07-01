@@ -4,10 +4,10 @@ import Title from "./title"
 import Row from "./row"
 import Icon from "./icon"
 
-export default function Section({ style = {}, title, icon, children }) {
+export default function Section({ style = {}, title, icon, iconWidth = '20px', children }) {
   return <View
     style={{
-      marginBottom: '36px',
+      marginBottom: '20px',
       ...style
     }}>
     {!title ?
@@ -23,14 +23,14 @@ export default function Section({ style = {}, title, icon, children }) {
           }}>
           <Icon
             faIcon={icon}
-            width={'22px'}
+            width={iconWidth}
             style={{
               marginRight: '8px'
             }}></Icon>
           <Title
             style={{
-              fontSize: '20px',
-              transform: 'translate(0, 6px)'
+              fontSize: '16px',
+              transform: 'translate(0, 4px)'
             }}>
             {title}
           </Title>
@@ -45,5 +45,6 @@ Section.propTypes = {
   children: PropTypes.node,
   title: PropTypes.string,
   style: PropTypes.object,
-  icon: PropTypes.object
+  icon: PropTypes.object,
+  iconWidth: PropTypes.string,
 }

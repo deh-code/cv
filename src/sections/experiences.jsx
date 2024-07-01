@@ -28,7 +28,8 @@ export default function Experiences() {
   return <Container>
     <Section
       title='Working Experiences'
-      icon={faBuilding}>
+      icon={faBuilding}
+      iconWidth="14px">
 
       {experiences.map((experience, index) => 
         <View 
@@ -91,7 +92,7 @@ export default function Experiences() {
                 style={{
                   marginBottom: '2px'
                 }}>
-                Expierences I gained:  
+                Expierence I gained:  
               </Text>
               {experience.tasks.map((task, index) =>
                 <Row

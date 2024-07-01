@@ -67,7 +67,7 @@ export default function Skills() {
           style={{
             width: '50%',
             padding: '8px',
-            backgroundColor: index == 1 || index == 2 ? '#f6fdff' : '#fffff5',
+            backgroundColor: index == 1 || index == 2 ? '#f6fdff' : '#fffff6',
             borderBottom: index == 1 ? '1px solid #eee' : 'none',
             borderLeft: index == 1 ? '1px solid #eee' : 'none',
             borderRight: index == 2 ? '1px solid #eee' : 'none',
@@ -78,7 +78,7 @@ export default function Skills() {
               paddingBottom: '4px',
             }}>
               <Icon faIcon={skill.icon} width={skill.iconWidth || '16px'} style={{ marginRight: '8px' }}></Icon>
-              <Title style={{fontStyle: 'italic'}}>{skill.title}</Title>
+              <Title style={{fontStyle: 'italic', fontSize: '14px'}}>{skill.title}</Title>
             </Row>
             <Row>
               {skill.items.map((item, index) => <Chip key={index} style={{margin: '0 6px 6px 0'}}>{item}</Chip>)}

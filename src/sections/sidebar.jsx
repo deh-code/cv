@@ -104,7 +104,7 @@ export default function Sidebar() {
       <View
         style={{
           marginBottom: '10px',
-          fontSize: '11px',
+          fontSize: '10px',
           color: '#666'
         }}>
           {contacts.map((contact, index) => 

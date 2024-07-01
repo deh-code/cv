@@ -15,7 +15,8 @@ import openSansExtraBold from './assets/fonts/open-sans/OpenSans-ExtraBold.ttf';
 import openSansBoldItalic from './assets/fonts/open-sans/OpenSans-BoldItalic.ttf';
 import openSansBold from './assets/fonts/open-sans/OpenSans-Bold.ttf';
 import Skills from './sections/skills';
-import Experiences from './sections/expiriences';
+import Experiences from './sections/experiences';
+import PersonalProjects from './sections/personal-projects';
 
 // Create styles
 const styles = StyleSheet.create({
@@ -113,17 +114,18 @@ export default function App () {
           <View
             style={{
               width: '66%',
-              paddingTop: '32px'
+              paddingTop: '12px'
             }}
           >
             <Skills></Skills>
             <Experiences></Experiences>
+            <PersonalProjects></PersonalProjects>
           </View>
           <View
             style={{
               width: '34%',
               backgroundColor: '#f4fbff',
-              paddingTop: '32px'
+              paddingTop: '12px'
             }}
           >
             <Sidebar></Sidebar>
