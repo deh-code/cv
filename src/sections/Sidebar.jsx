@@ -8,6 +8,7 @@ import Icon from "../components/Icon";
 import Row from "../components/Row";
 import Education from "./Education";
 import Languages from "./Languages";
+import Bio from "./Bio";
 
 const links = [
   {
@@ -135,6 +136,12 @@ export default function Sidebar() {
           </Link>
         )}
       </Row>
+    </View>
+    <View
+      style={{
+        marginBottom: '20px'
+      }}>
+      <Bio></Bio>
     </View>
     <View
       style={{

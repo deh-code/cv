@@ -13,7 +13,7 @@ const projects = [
   {
     title: 'Generator Yeogurt 2',
     link: 'https://github.com/deh-code/generator-yeogurt-2',
-    description: 'An old static site generator based on gulp and browserify, that I forked. It was no longer receiving updates, still it was extensively used in my company codebase, so I had to do some optimizations in order to maintain older projects.'
+    description: 'An old static site generator based on gulp and browserify, that I forked. It was no longer receiving updates, still it was used in some of my company\'s older projects, so I had to do some optimizations in order to maintain those ones.'
   },
   {
     title: 'Pagami (work in progress)',
