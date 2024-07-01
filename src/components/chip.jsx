@@ -13,7 +13,7 @@ export default function Chip({style = {}, children}) {
   }}>
     <Text
       style={{
-        fontSize: '14px',
+        fontSize: '10px',
       }}
     >
       {children}

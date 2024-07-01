@@ -17,10 +17,10 @@ export default function Section({style = {}, title, icon, children}) {
         borderBottom: '1px solid #eee',
         paddingBottom: '4px',
       }}>
-        <Icon faIcon={icon} width={'28px'} style={{ marginRight: '8px' }}></Icon>
+        <Icon faIcon={icon} width={'22px'} style={{ marginRight: '8px' }}></Icon>
         <Title
           style={{
-            fontSize: '28px'
+            fontSize: '20px'
           }}>{title}</Title>
       </Row>
     }
