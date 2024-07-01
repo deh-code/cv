@@ -4,25 +4,38 @@ import Title from "./title"
 import Row from "./row"
 import Icon from "./icon"
 
-export default function Section({style = {}, title, icon, children}) {
+export default function Section({ style = {}, title, icon, children }) {
   return <View
-  style={{
-    marginBottom: '36px',
-    ...style
-  }}>
-    {!title ? 
-      <></> :  
-      <Row style={{
+    style={{
+      marginBottom: '36px',
+      ...style
+    }}>
+    {!title ?
+      <></> :
+      <View style={{
         marginBottom: '12px',
         borderBottom: '1px solid #eee',
-        paddingBottom: '4px',
+        paddingBottom: '8px',
       }}>
-        <Icon faIcon={icon} width={'22px'} style={{ marginRight: '8px' }}></Icon>
-        <Title
+        <Row
           style={{
-            fontSize: '20px'
-          }}>{title}</Title>
-      </Row>
+            alignItems: 'baseline'
+          }}>
+          <Icon
+            faIcon={icon}
+            width={'22px'}
+            style={{
+              marginRight: '8px'
+            }}></Icon>
+          <Title
+            style={{
+              fontSize: '20px',
+              transform: 'translate(0, 6px)'
+            }}>
+            {title}
+          </Title>
+        </Row>
+      </View>
     }
     {children}
   </View>

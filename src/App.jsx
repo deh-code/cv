@@ -15,6 +15,7 @@ import openSansExtraBold from './assets/fonts/open-sans/OpenSans-ExtraBold.ttf';
 import openSansBoldItalic from './assets/fonts/open-sans/OpenSans-BoldItalic.ttf';
 import openSansBold from './assets/fonts/open-sans/OpenSans-Bold.ttf';
 import Skills from './sections/skills';
+import Experiences from './sections/expiriences';
 
 // Create styles
 const styles = StyleSheet.create({
@@ -116,6 +117,7 @@ export default function App () {
             }}
           >
             <Skills></Skills>
+            <Experiences></Experiences>
           </View>
           <View
             style={{

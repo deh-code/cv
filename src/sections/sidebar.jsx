@@ -95,7 +95,7 @@ export default function Sidebar() {
     </Row>
     <View
       style={{
-        marginBottom: '24px',
+        marginBottom: '10px',
         fontSize: '11px',
         color: '#666'
       }}>
@@ -106,12 +106,7 @@ export default function Sidebar() {
           </Row>
         )}
     </View>
-    <View
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        flexWrap: 'wrap'
-      }}>
+    <Row>
         {links.map((link, index) =>  
           <Link
             key={index}
@@ -130,6 +125,6 @@ export default function Sidebar() {
             <Text>{link.title}</Text>
           </Link>
         )}
-      </View>
+      </Row>
   </Container>
 }
