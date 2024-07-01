@@ -6,7 +6,7 @@ export default [
     },
     level: {
       en: 'native',
-      it: 'native'
+      it: 'madre lingua'
     }
   },
   {
