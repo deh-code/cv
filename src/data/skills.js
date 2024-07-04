@@ -25,7 +25,7 @@ export default [
       'npm/yarn/pnpm',
       'MySQL',
       'Docker',
-      'Git',
+      'Git/GitLab',
       'VS Code'
     ]
   },
