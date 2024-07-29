@@ -3,16 +3,32 @@ import { faBook, faCode, faGears, faScrewdriverWrench } from "@fortawesome/free-
 export default [
   {
     title: {
-      en: 'Frameworks',
-      it: 'Frameworks'
+      en: 'Frontend'
     },
     icon: faGears,
     iconWidth: '22px',
     items: [
-      'Node.js',
-      'Express',
-      'Next.js',
       'React',
+      'Vite',
+      'Webpack',
+      'jQuery',
+      'Pug',
+      'SASS'
+    ]
+  },
+  {
+    title: {
+      en: 'Backend'
+    },
+    icon: faCode,
+    items: [
+      'Node.js',
+      'Next.js',
+      'Express',
+      'Spring',
+      'Wordpress',
+      'Prisma',
+      'MySQL'
     ]
   },
   {
@@ -22,26 +38,12 @@ export default [
     },
     icon: faScrewdriverWrench,
     items: [
-      'npm/yarn/pnpm',
-      'MySQL',
       'Docker',
       'Git/GitLab',
-      'VS Code'
-    ]
-  },
-  {
-    title: {
-      en: 'Program Langs',
-      it: 'Ling. Programm.'
-    },
-    icon: faCode,
-    items: [
-      'Javascript',
+      'npm/yarn/pnpm',
+      'Maven',
       'Typescript',
-      'Python',
-      'HTML',
-      'CSS/SASS',
-      'Pug'
+      'VS Code',
     ]
   },
   {
@@ -53,10 +55,10 @@ export default [
     items: [
       'API REST',
       'MVC',
-      'Auth',
-      'Sanification',
       'HTTP',
-      'SSH'
+      'SSH',
+      'Sanification',
+      'Authentication',
     ]
   },
 ]

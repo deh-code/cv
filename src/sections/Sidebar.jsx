@@ -9,6 +9,7 @@ import Languages from "./Languages";
 import Bio from "./Bio";
 import contacts from "../data/contacts";
 import useLocalization from "../hooks/localization";
+import profileImage from '../assets/images/profile.jpeg';
 
 const links = [
   {
@@ -38,7 +39,7 @@ export default function Sidebar() {
       }}>
       <View
         style={{
-          marginBottom: '20px'
+          marginBottom: '16px'
         }}>
         <Text
           style={{
@@ -57,6 +58,16 @@ export default function Sidebar() {
           }}>
           Fullstack Developer
         </Text>
+      </View>
+      <View
+        style={{
+          width: '60%',
+          overflow: 'hidden',
+          borderRadius: '6px',
+          marginBottom: '16px'
+        }}
+      >
+        <Image src={profileImage} ></Image>
       </View>
       <View
         style={{
