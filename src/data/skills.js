@@ -43,6 +43,7 @@ export default [
       'npm/yarn/pnpm',
       'Maven',
       'Typescript',
+      'Jest',
       'VS Code',
     ]
   },

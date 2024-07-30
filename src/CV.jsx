@@ -1,4 +1,4 @@
-import { Page, Document, StyleSheet, PDFViewer, View, Font, Text } from '@react-pdf/renderer';
+import { Page, Document, StyleSheet, PDFViewer, View, Font } from '@react-pdf/renderer';
 import Sidebar from './sections/Sidebar';
 import Row from './components/Row';
 
@@ -25,7 +25,8 @@ const styles = StyleSheet.create({
   page: {
     backgroundColor: 'white',
     display: 'flex',
-    fontFamily: 'openSans'
+    fontFamily: 'openSans',
+    paddingVertical: '12px'
   },
   header: {
     backgroundColor: '#313c4e',
@@ -117,8 +118,7 @@ export default function CV() {
           >
             <View
               style={{
-                width: '66%',
-                paddingTop: '12px'
+                width: '66%'
               }}
             >
               <Skills></Skills>
@@ -129,7 +129,8 @@ export default function CV() {
               style={{
                 width: '34%',
                 backgroundColor: '#f4fbff',
-                paddingTop: '12px'
+                paddingTop: '12px',
+                marginVertical: '-12px'
               }}
             >
               <Sidebar></Sidebar>
