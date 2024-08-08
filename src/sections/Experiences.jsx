@@ -75,7 +75,7 @@ export default function Experiences() {
                 color: "#333",
                 fontWeight: "medium",
                 fontSize: "9px",
-                marginBottom: '8px'
+                marginBottom: "8px",
               }}
             >
               {l(experience.descriptions).map((description, index) => (
@@ -91,32 +91,33 @@ export default function Experiences() {
             </View>
             <View>
               {experience.projects.map((project, index) => (
-                <View key={index} style={{marginBottom: '12px'}}>
+                <View key={index} style={{ marginBottom: "12px" }}>
                   <Row>
                     <View>
-                    <Text style={{marginRight: '8px'}}>-</Text>
+                      <Text style={{ marginRight: "8px" }}>-</Text>
                     </View>
-                    <View style={{
-                        fontSize: '9px',
-                        color: '#333',
-                        flex:'1 1 1'
+                    <View
+                      style={{
+                        fontSize: "9px",
+                        color: "#333",
+                        flex: "1 1 1",
                       }}
                     >
                       <Text>{l(project.description)}</Text>
                     </View>
                   </Row>
-                      <Text
-                        style={{
-                          fontStyle: 'italic',
-                          color: '#417E38',
-                          fontSize: '8px',
-                          marginTop: '4px',
-                          paddingLeft: '10px'
-                        }}
-                      >
-                        {project.skills.join(', ')}
-                      </Text>
-                      </View>
+                  <Text
+                    style={{
+                      fontStyle: "italic",
+                      color: "#417E38",
+                      fontSize: "8px",
+                      marginTop: "4px",
+                      paddingLeft: "10px",
+                    }}
+                  >
+                    {project.skills.join(", ")}
+                  </Text>
+                </View>
               ))}
             </View>
           </View>

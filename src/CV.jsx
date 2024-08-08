@@ -129,7 +129,7 @@ export default function CV() {
               >
                 <View
                   style={{
-                    marginTop: '16px'
+                    marginTop: "16px",
                   }}
                 >
                   <Skills></Skills>
@@ -138,9 +138,10 @@ export default function CV() {
                   <Experiences></Experiences>
                 </View>
                 <View
-                style={{
-                  marginTop: '16px'
-                }}>
+                  style={{
+                    marginTop: "16px",
+                  }}
+                >
                   <PersonalProjects></PersonalProjects>
                 </View>
               </View>

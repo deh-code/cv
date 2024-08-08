@@ -1,65 +1,56 @@
-import { faBook, faCode, faGears, faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons"
+import {
+  faBook,
+  faCode,
+  faGears,
+  faScrewdriverWrench,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default [
   {
     title: {
-      en: 'Frontend'
+      en: "Frontend",
     },
     icon: faGears,
-    iconWidth: '22px',
-    items: [
-      'React',
-      'Vite',
-      'Webpack',
-      'jQuery',
-      'Pug',
-      'SASS'
-    ]
+    iconWidth: "22px",
+    items: ["React", "Vite", "Webpack", "jQuery", "Pug", "SASS"],
   },
   {
     title: {
-      en: 'Backend'
+      en: "Backend",
     },
     icon: faCode,
     items: [
-      'Node.js',
-      'Next.js',
-      'Express',
-      'Spring',
-      'Wordpress',
-      'Prisma',
-      'MySQL'
-    ]
+      "Node.js",
+      "Next.js",
+      "Express",
+      "Spring",
+      "Wordpress",
+      "Prisma",
+      "MySQL",
+    ],
   },
   {
     title: {
-      en: 'Tools',
-      it: 'Strumenti'
+      en: "Tools",
+      it: "Strumenti",
     },
     icon: faScrewdriverWrench,
     items: [
-      'Docker',
-      'Git/GitLab',
-      'npm/yarn/pnpm',
-      'Maven',
-      'Typescript',
-      'Jest',
-      'VS Code',
-    ]
+      "Docker",
+      "Git/GitLab",
+      "npm/yarn/pnpm",
+      "Maven",
+      "Typescript",
+      "Jest",
+      "VS Code",
+    ],
   },
   {
     title: {
-      en: 'Concepts',
-      it: 'Concetti'
+      en: "Concepts",
+      it: "Concetti",
     },
     icon: faBook,
-    items: [
-      'API REST',
-      'MVC',
-      'HTTP',
-      'SSH',
-      'Sanification',
-      'Authentication',
-    ]
+    items: ["API REST", "MVC", "HTTP", "SSH", "Sanification", "Authentication"],
   },
-]
+];

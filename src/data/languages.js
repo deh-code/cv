@@ -1,19 +1,19 @@
 export default [
   {
     name: {
-      en: 'Italian',
-      it: 'Italiano'
+      en: "Italian",
+      it: "Italiano",
     },
     level: {
-      en: 'native',
-      it: 'madre lingua'
-    }
+      en: "native",
+      it: "madre lingua",
+    },
   },
   {
-    name: { 
-      en: 'English', 
-      it: 'Inglese' 
+    name: {
+      en: "English",
+      it: "Inglese",
     },
-    level: 'B2'
-  }
-]
+    level: "B2",
+  },
+];

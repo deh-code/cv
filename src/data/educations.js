@@ -1,17 +1,16 @@
 export default [
   {
     title: {
-      en: 'Bachelor\' degree',
-      it: 'Laurea Triennale',
+      en: "Bachelor' degree",
+      it: "Laurea Triennale",
     },
     subject: {
-      en: 'Computer Science',
-      it: 'Informatica',
+      en: "Computer Science",
+      it: "Informatica",
     },
     location: {
-      en: 'University of Pisa',
-      it: 'Università di Pisa'
-    }
-  }
-
-]
+      en: "University of Pisa",
+      it: "Università di Pisa",
+    },
+  },
+];

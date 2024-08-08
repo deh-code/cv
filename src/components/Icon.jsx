@@ -1,5 +1,5 @@
-import { Path, Svg } from '@react-pdf/renderer'
-import PropTypes from 'prop-types';
+import { Path, Svg } from "@react-pdf/renderer";
+import PropTypes from "prop-types";
 
 export default function Icon({ faIcon, style = {}, fill, width }) {
   if (!faIcon) {
@@ -7,10 +7,10 @@ export default function Icon({ faIcon, style = {}, fill, width }) {
   }
 
   const { icon } = faIcon;
-  const duotone = Array.isArray(icon[4])
-  const paths = Array.isArray(icon[4]) ? icon[4] : [icon[4]]
-  style.width = width || style.width || '16px'
-  const color = fill || style.color || 'black'
+  const duotone = Array.isArray(icon[4]);
+  const paths = Array.isArray(icon[4]) ? icon[4] : [icon[4]];
+  style.width = width || style.width || "16px";
+  const color = fill || style.color || "black";
 
   return (
     <Svg viewBox={`0 0 ${icon[0]} ${icon[1]}`} style={style}>
@@ -24,12 +24,12 @@ export default function Icon({ faIcon, style = {}, fill, width }) {
           />
         ))}
     </Svg>
-  )
+  );
 }
 
 Icon.propTypes = {
   faIcon: PropTypes.object,
   style: PropTypes.object,
   fill: PropTypes.string,
-  width: PropTypes.string
-}
+  width: PropTypes.string,
+};
