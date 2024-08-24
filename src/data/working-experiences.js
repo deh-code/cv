@@ -17,7 +17,7 @@ export default [
       ],
       it: [
         "Come Full Stack Developer, ho avuto modo di gestire l'intero ciclo di vita del prodotto, dalla progettazione delle API REST allo sviluppo dell'interfaccia utente.",
-        "Ho lavorato in piccoli/medi team, coordinandomi con i miei colleghi tramite Trello e la board delle issue di Gitlab.",
+        "Ho lavorato in team di media/piccola dimensione, coordinandomi con i miei colleghi tramite Trello e la board delle issue di Gitlab.",
         "Ho proposto tirocini universitari per la mia azienda e seguito gli stagisti fino alla loro assunzione.",
       ],
     },
