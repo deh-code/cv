@@ -1,4 +1,4 @@
 export default {
-  en: "Aiming to secure a role as a Full-Stack Developer with a focus on Node.js where I can apply my comprehensive knowledge of both frontend and backend technologies, enhance user experiences, and contribute to the full software development lifecycle.",
-  it: "Punto a ottenere un ruolo come Full-Stack Developer con specializzazione su Node.js, nel quale poter applicare le mie conoscenze di frontend e backend, migliorare l'esperienza utente e avere una visione del prodotto a 360 gradi.",
+  en: "I am a Fullstack Developer specializing in Node.js-based technologies, with strong expertise in both front-end and back-end development. I excel in building scalable web applications and am committed to staying up-to-date with the latest technologies to deliver innovative solutions.",
+  it: "Sono un Sviluppatore Fullstack specializzato in tecnologie basate su Node.js, con una solida esperienza sia nello sviluppo front-end che back-end. Eccello nella creazione di applicazioni web scalabili e mi impegno regolarmente a rimanere aggiornato sulle ultime tecnologie per offrire soluzioni innovative.",
 };

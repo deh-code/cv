@@ -13,7 +13,7 @@ export default [
     icon: faLocationDot,
   },
   {
-    text: "+3899164109",
+    text: "+393899164109",
     icon: faMobileScreen,
   },
   {
