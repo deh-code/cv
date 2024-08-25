@@ -3,8 +3,8 @@ export default [
     title: "CV",
     link: "https://github.com/deh-code/cv",
     description: {
-      en: "The CV you are reading right now is actually a React WebApp compiled to a PDF with the react-pdf library.",
-      it: "Il CV che stai leggendo in questo momento, non è altro che una WebApp React compilata in PDF con la libreria react-pdf.",
+      en: "This CV is actually a React WebApp compiled to a PDF with the react-pdf library.",
+      it: "Questo CV non è altro che una WebApp React compilata in PDF con la libreria react-pdf.",
     },
   },
   {
