@@ -1,18 +1,16 @@
-import { Text } from "@react-pdf/renderer";
+import { StyleSheet, Text } from "@react-pdf/renderer";
 import PropTypes from "prop-types";
 
+const styles = StyleSheet.create({
+  main: (style) => ({
+    fontSize: "16px",
+    fontWeight: "bold",
+    ...style,
+  }),
+});
+
 export default function Title({ style = {}, children }) {
-  return (
-    <Text
-      style={{
-        fontSize: "16px",
-        fontWeight: "bold",
-        ...style,
-      }}
-    >
-      {children}
-    </Text>
-  );
+  return <Text style={styles.main(style)}>{children}</Text>;
 }
 
 Title.propTypes = {

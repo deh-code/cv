@@ -1,8 +1,30 @@
-import { View } from "@react-pdf/renderer";
+import { StyleSheet, View } from "@react-pdf/renderer";
 import PropTypes from "prop-types";
 import Title from "./Title";
 import Row from "./Row";
 import Icon from "./Icon";
+
+const styles = StyleSheet.create({
+  main: (style) => ({
+    marginBottom: "20px",
+    ...style,
+  }),
+  headerContainer: {
+    marginBottom: "12px",
+    borderBottom: "1px solid #eee",
+    paddingBottom: "8px",
+  },
+  header: {
+    alignItems: "baseline",
+  },
+  headerIcon: {
+    marginRight: "8px",
+  },
+  headerTitle: {
+    fontSize: "16px",
+    transform: "translate(0, 4px)",
+  },
+});
 
 export default function Section({
   style = {},
@@ -12,42 +34,18 @@ export default function Section({
   children,
 }) {
   return (
-    <View
-      style={{
-        marginBottom: "20px",
-        ...style,
-      }}
-    >
+    <View style={styles.main(style)}>
       {!title ? (
         <></>
       ) : (
-        <View
-          style={{
-            marginBottom: "12px",
-            borderBottom: "1px solid #eee",
-            paddingBottom: "8px",
-          }}
-        >
-          <Row
-            style={{
-              alignItems: "baseline",
-            }}
-          >
+        <View style={styles.headerContainer}>
+          <Row style={styles.header}>
             <Icon
               faIcon={icon}
               width={iconWidth}
-              style={{
-                marginRight: "8px",
-              }}
+              style={styles.headerIcon}
             ></Icon>
-            <Title
-              style={{
-                fontSize: "16px",
-                transform: "translate(0, 4px)",
-              }}
-            >
-              {title}
-            </Title>
+            <Title style={styles.headerTitle}>{title}</Title>
           </Row>
         </View>
       )}
