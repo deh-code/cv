@@ -19,6 +19,11 @@ loadFonts();
 
 // Create styles
 const styles = StyleSheet.create({
+  main: {
+    alignItems: "stretch",
+    flexGrow: "1",
+    flexWrap: "nowrap",
+  },
   page: {
     backgroundColor: "white",
     display: "flex",
@@ -30,8 +35,21 @@ const styles = StyleSheet.create({
     paddingVertical: "24px",
     color: "white",
   },
+  content: {
+    width: "66%",
+  },
   sidebar: {
     width: "34%",
+  },
+  sidebarBackdrop: {
+    width: "34%",
+    backgroundColor: "#f4fbff",
+    position: "absolute",
+    right: 0,
+    top: 0,
+    bottom: 0,
+    zIndex: -1,
+    marginVertical: -20,
   },
 });
 
@@ -43,18 +61,8 @@ export default function CV() {
       <Document>
         <LocaleContext.Provider value={locale}>
           <Page size="A4" style={styles.page}>
-            <Row
-              style={{
-                alignItems: "stretch",
-                flexGrow: "1",
-                flexWrap: "nowrap",
-              }}
-            >
-              <View
-                style={{
-                  width: "66%",
-                }}
-              >
+            <Row style={styles.main}>
+              <View style={styles.content}>
                 <View>
                   <Skills></Skills>
                 </View>
@@ -68,19 +76,7 @@ export default function CV() {
               <View style={styles.sidebar}>
                 <Sidebar></Sidebar>
               </View>
-              <View
-                style={{
-                  ...styles.sidebar,
-                  backgroundColor: "#f4fbff",
-                  position: "absolute",
-                  right: 0,
-                  top: 0,
-                  bottom: 0,
-                  zIndex: -1,
-                  marginVertical: -20,
-                }}
-                fixed
-              ></View>
+              <View style={styles.sidebarBackdrop} fixed></View>
             </Row>
           </Page>
         </LocaleContext.Provider>
