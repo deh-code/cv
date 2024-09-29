@@ -1,8 +1,8 @@
+import { faFirefoxBrowser } from "@fortawesome/free-brands-svg-icons";
 import {
   faBook,
-  faCode,
-  faGears,
   faScrewdriverWrench,
+  faServer,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default [
@@ -10,7 +10,7 @@ export default [
     title: {
       en: "Frontend",
     },
-    icon: faGears,
+    icon: faFirefoxBrowser,
     iconWidth: "22px",
     items: [
       "React",
@@ -28,16 +28,15 @@ export default [
     title: {
       en: "Backend",
     },
-    icon: faCode,
+    icon: faServer,
     items: [
       "Node.js",
       "Next.js",
       "Express",
       "Fastify",
-      "Spring",
-      "Wordpress",
       "Prisma",
       "MySQL",
+      "PostgreSQL",
       "MongoDB",
     ],
   },
@@ -53,9 +52,9 @@ export default [
       "npm",
       "yarn",
       "pnpm",
-      "Maven",
       "Typescript",
       "Jest",
+      "Vitest",
       "SSH",
       "Debugging",
       "VS Code",

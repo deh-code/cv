@@ -19,4 +19,12 @@ export default {
     en: "Languages",
     it: "Lingue",
   },
+  openSource: {
+    en: "Open Source Contributions",
+    it: "Contributi all'Open Source",
+  },
+  certifications: {
+    en: "Certificates and Results",
+    it: "Certificati e Riconoscimenti",
+  },
 };

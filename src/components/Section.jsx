@@ -6,7 +6,7 @@ import Icon from "./Icon";
 
 const styles = StyleSheet.create({
   main: (style) => ({
-    marginBottom: "20px",
+    marginBottom: "32px",
     ...style,
   }),
   headerContainer: {

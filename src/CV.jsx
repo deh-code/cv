@@ -14,6 +14,8 @@ import PersonalProjects from "./sections/PersonalProjects";
 import { useContext } from "react";
 import { LocaleContext } from "./App";
 import { loadFonts } from "./lib/font";
+import OpenSource from "./sections/OpenSource";
+import Certifications from "./sections/Certifications";
 
 loadFonts();
 
@@ -71,6 +73,12 @@ export default function CV() {
                 </View>
                 <View>
                   <PersonalProjects></PersonalProjects>
+                </View>
+                <View>
+                  <OpenSource></OpenSource>
+                </View>
+                <View>
+                  <Certifications></Certifications>
                 </View>
               </View>
               <View style={styles.sidebar}>
