@@ -5,8 +5,7 @@ import {
   StyleSheet,
   View,
 } from "@react-pdf/renderer";
-import Row from "./components/Row";
-import Sidebar from "./sections/Sidebar";
+import TopBar from "./sections/Sidebar";
 
 import { useContext } from "react";
 import { LocaleContext } from "./App";
@@ -38,22 +37,6 @@ const styles = StyleSheet.create({
     paddingVertical: "24px",
     color: "white",
   },
-  content: {
-    width: "66%",
-  },
-  sidebar: {
-    width: "34%",
-  },
-  sidebarBackdrop: {
-    width: "34%",
-    backgroundColor: "#f4fbff",
-    position: "absolute",
-    right: 0,
-    top: 0,
-    bottom: 0,
-    zIndex: -1,
-    marginVertical: -20,
-  },
 });
 
 export default function CV() {
@@ -64,32 +47,29 @@ export default function CV() {
       <Document>
         <LocaleContext.Provider value={locale}>
           <Page size="A4" style={styles.page}>
-            <Row style={styles.main}>
-              <View style={styles.content}>
-                <View>
-                  <Skills></Skills>
-                </View>
-                <View>
-                  <Experiences></Experiences>
-                </View>
-                <View>
-                  <PersonalProjects></PersonalProjects>
-                </View>
-                <View>
-                  <OpenSource></OpenSource>
-                </View>
-                <View>
-                  <Certifications></Certifications>
-                </View>
-                <View>
-                  <TechnicalTags></TechnicalTags>
-                </View>
+            <View style={styles.sidebar}>
+              <TopBar></TopBar>
+            </View>
+            <View style={styles.content}>
+              <View>
+                <Skills></Skills>
               </View>
-              <View style={styles.sidebar}>
-                <Sidebar></Sidebar>
+              <View>
+                <Experiences></Experiences>
               </View>
-              <View style={styles.sidebarBackdrop} fixed></View>
-            </Row>
+              <View>
+                <PersonalProjects></PersonalProjects>
+              </View>
+              <View>
+                <OpenSource></OpenSource>
+              </View>
+              <View>
+                <Certifications></Certifications>
+              </View>
+              <View>
+                <TechnicalTags></TechnicalTags>
+              </View>
+            </View>
           </Page>
         </LocaleContext.Provider>
       </Document>

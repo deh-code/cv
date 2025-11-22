@@ -1,11 +1,11 @@
-import { StyleSheet, Text, View } from "@react-pdf/renderer";
-import Row from "../components/Row";
-import Icon from "../components/Icon";
 import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons";
+import { StyleSheet, Text, View } from "@react-pdf/renderer";
+import Icon from "../components/Icon";
+import Row from "../components/Row";
 import Title from "../components/Title";
-import useLocalization from "../hooks/localization";
-import sections from "../data/sections";
 import languages from "../data/languages";
+import sections from "../data/sections";
+import useLocalization from "../hooks/localization";
 
 const styles = StyleSheet.create({
   main: {
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: "14px",
-    marginBottom: "12px",
+    marginBottom: "8px",
   },
   languageContainer: {
     display: "flex",

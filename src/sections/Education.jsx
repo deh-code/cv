@@ -1,14 +1,14 @@
-import { StyleSheet, Text, View } from "@react-pdf/renderer";
 import {
   faGraduationCap,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
+import { StyleSheet, Text, View } from "@react-pdf/renderer";
 import Icon from "../components/Icon";
 import Row from "../components/Row";
 import Title from "../components/Title";
-import useLocalization from "../hooks/localization";
-import sections from "../data/sections";
 import educations from "../data/educations";
+import sections from "../data/sections";
+import useLocalization from "../hooks/localization";
 
 const styles = StyleSheet.create({
   headerIcon: {
@@ -49,31 +49,31 @@ export default function Education() {
       <Row>
         <Icon faIcon={faGraduationCap} style={styles.headerIcon}></Icon>
         <Title style={styles.headerTitle}>{l(sections.education)}</Title>
-        <View>
-          {educations.map((education, index) => (
-            <View key={index}>
-              <Row style={styles.educationHeader}>
-                <Text style={styles.educationTitle}>{l(education.title)}</Text>
-                <Text style={styles.educationTitleSeparator}>-</Text>
-                <Text style={styles.educationSubject}>
-                  {l(education.subject)}
-                </Text>
-              </Row>
-              <Row>
-                <Icon
-                  faIcon={faLocationDot}
-                  width="8px"
-                  fill="#666"
-                  style={styles.educationIcon}
-                ></Icon>
-                <Text style={styles.educationLocation}>
-                  {l(education.location)}
-                </Text>
-              </Row>
-            </View>
-          ))}
-        </View>
       </Row>
+      <View>
+        {educations.map((education, index) => (
+          <View key={index}>
+            <Row style={styles.educationHeader}>
+              <Text style={styles.educationTitle}>{l(education.title)}</Text>
+              <Text style={styles.educationTitleSeparator}>-</Text>
+              <Text style={styles.educationSubject}>
+                {l(education.subject)}
+              </Text>
+            </Row>
+            <Row>
+              <Icon
+                faIcon={faLocationDot}
+                width="8px"
+                fill="#666"
+                style={styles.educationIcon}
+              ></Icon>
+              <Text style={styles.educationLocation}>
+                {l(education.location)}
+              </Text>
+            </Row>
+          </View>
+        ))}
+      </View>
     </View>
   );
 }
