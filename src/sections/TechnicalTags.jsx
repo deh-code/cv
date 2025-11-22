@@ -18,7 +18,7 @@ export default function TechnicalTags() {
           <Text style={mainStyles.sectionDescription}>
             {l(technicalTags.description)}
           </Text>
-          <Text style={mainStyles.tag}>{technicalTags.items.join(", ")}</Text>
+          <Text style={mainStyles.tag}>{technicalTags.items.join(" | ")}</Text>
         </Row>
       </Section>
     </Container>

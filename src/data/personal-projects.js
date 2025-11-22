@@ -15,12 +15,4 @@ export default [
       it: "Un generatore di siti statici basato su e Browserify, che ho forkato. Non riceveva più aggiornamenti, ma dal momento che era utilizzato in diversi progetti della mia azienda, ho attuato alcune ottimizzazioni per agevolare lo sviluppo su quest'ultimi",
     },
   },
-  {
-    title: "Pagami (work in progress)",
-    link: "https://github.com/orgs/deh-code-pagami/repositories",
-    description: {
-      en: "A React WebApp for debt tracking, it uses Strapi CMS for backend and a MySQL database. The repository is splitted in 2 modules (frontend and backend) that can be shipped separately and orchestrated with Docker and NGINX.",
-      it: "Una WebApp React per il tracciamento dei debiti, utilizza Strapi CMS come backend e un database MySQL. La repository è divisa in due moduli (frontend e backend) che possono essere installati separatamente e orchestrati con Docker e NGINX.",
-    },
-  },
 ];

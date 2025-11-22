@@ -6,7 +6,6 @@ import Section from "../components/Section";
 import sections from "../data/sections";
 import workingExperiences from "../data/working-experiences";
 import useLocalization from "../hooks/localization";
-import { mainStyles } from "../lib/style";
 
 const styles = StyleSheet.create({
   experienceContainer: {
@@ -39,9 +38,9 @@ const styles = StyleSheet.create({
   experienceDescription: {
     marginBottom: "4px",
   },
-  projectsContainer: { marginBottom: "12px" },
-  projectListMarker: { marginRight: "8px" },
-  projectDescription: {
+  achievementsContainer: { marginBottom: "4px" },
+  achievementListMarker: { marginRight: "8px" },
+  achievementDescription: {
     fontSize: "9px",
     color: "#333",
     flex: "1 1 1",
@@ -59,7 +58,13 @@ export default function Experiences() {
         iconWidth="14px"
       >
         {workingExperiences.map((experience, index) => (
-          <View key={index} style={styles.experienceContainer}>
+          <View
+            wrap={false}
+            key={index}
+            style={{
+              ...styles.experienceContainer,
+            }}
+          >
             <Row style={styles.experienceHeader}>
               <Text style={styles.experienceRole}>{l(experience.role)}</Text>
               <Text style={styles.experienceRoleSeparator}> - </Text>
@@ -70,27 +75,17 @@ export default function Experiences() {
               </Link>
             </Row>
             <Text style={styles.experiencePeriod}>{l(experience.period)}</Text>
-            <View style={mainStyles.sectionDescription}>
-              {l(experience.descriptions).map((description, index) => (
-                <Text key={index} style={styles.experienceDescription}>
-                  {description}
-                </Text>
-              ))}
-            </View>
             <View>
-              {experience.projects.map((project, index) => (
-                <View key={index} style={styles.projectsContainer}>
+              {experience.achievements.map((achievement, index) => (
+                <View key={index} style={styles.achievementsContainer}>
                   <Row>
                     <View>
-                      <Text style={styles.projectListMarker}>-</Text>
+                      <Text style={styles.achievementListMarker}>-</Text>
                     </View>
-                    <View style={styles.projectDescription}>
-                      <Text>{l(project.description)}</Text>
+                    <View style={styles.achievementDescription}>
+                      <Text>{l(achievement.description)}</Text>
                     </View>
                   </Row>
-                  <Text style={mainStyles.tag}>
-                    {project.skills.join(", ")}
-                  </Text>
                 </View>
               ))}
             </View>

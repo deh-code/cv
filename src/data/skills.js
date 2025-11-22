@@ -1,9 +1,5 @@
 import { faFirefoxBrowser } from "@fortawesome/free-brands-svg-icons";
-import {
-  faBook,
-  faScrewdriverWrench,
-  faServer,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBook, faServer, faSitemap } from "@fortawesome/free-solid-svg-icons";
 
 export default [
   {
@@ -13,6 +9,7 @@ export default [
     icon: faFirefoxBrowser,
     iconWidth: "22px",
     items: [
+      "Next.js",
       "React",
       "Vite",
       "Webpack",
@@ -31,7 +28,6 @@ export default [
     icon: faServer,
     items: [
       "Node.js",
-      "Next.js",
       "Express",
       "Fastify",
       "Prisma",
@@ -45,32 +41,18 @@ export default [
   },
   {
     title: {
-      en: "Tools",
-      it: "Strumenti",
+      en: "DevOps & Architectures",
+      it: "DevOps & Architetture",
     },
-    icon: faScrewdriverWrench,
-    items: [
-      "Docker",
-      "Git/GitLab",
-      "npm",
-      "yarn",
-      "pnpm",
-      "Typescript",
-      "Jest",
-      "Vitest",
-      "SSH",
-      "VS Code",
-    ],
+    icon: faSitemap,
+    items: ["Docker", "Git/GitLab", "SSH", "AWS", "Hetzner"],
   },
   {
     title: {
-      en: "Cloud",
-      it: "Cloud",
+      en: "Various",
+      it: "Vari",
     },
     icon: faBook,
-    items: [
-      'AWS',
-      'Hetzner',
-    ],
+    items: ["npm", "yarn", "pnpm", "Typescript", "Jest", "Vitest", "VS Code"],
   },
 ];

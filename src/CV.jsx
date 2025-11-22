@@ -5,7 +5,7 @@ import {
   StyleSheet,
   View,
 } from "@react-pdf/renderer";
-import TopBar from "./sections/Sidebar";
+import TopBar from "./sections/TopBar";
 
 import { useContext } from "react";
 import { LocaleContext } from "./App";
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     display: "flex",
     fontFamily: "openSans",
-    paddingVertical: 20,
+    paddingVertical: "12px",
   },
   header: {
     backgroundColor: "#313c4e",
