@@ -1,21 +1,22 @@
 import {
-  Page,
   Document,
-  StyleSheet,
+  Page,
   PDFViewer,
+  StyleSheet,
   View,
 } from "@react-pdf/renderer";
-import Sidebar from "./sections/Sidebar";
 import Row from "./components/Row";
+import Sidebar from "./sections/Sidebar";
 
-import Skills from "./sections/Skills";
-import Experiences from "./sections/Experiences";
-import PersonalProjects from "./sections/PersonalProjects";
 import { useContext } from "react";
 import { LocaleContext } from "./App";
 import { loadFonts } from "./lib/font";
-import OpenSource from "./sections/OpenSource";
 import Certifications from "./sections/Certifications";
+import Experiences from "./sections/Experiences";
+import OpenSource from "./sections/OpenSource";
+import PersonalProjects from "./sections/PersonalProjects";
+import Skills from "./sections/Skills";
+import TechnicalTags from "./sections/TechnicalTags";
 
 loadFonts();
 
@@ -79,6 +80,9 @@ export default function CV() {
                 </View>
                 <View>
                   <Certifications></Certifications>
+                </View>
+                <View>
+                  <TechnicalTags></TechnicalTags>
                 </View>
               </View>
               <View style={styles.sidebar}>

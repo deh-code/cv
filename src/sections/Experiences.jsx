@@ -1,11 +1,12 @@
 import { faBuilding } from "@fortawesome/free-solid-svg-icons";
-import Container from "../components/Container";
-import Section from "../components/Section";
 import { Link, StyleSheet, Text, View } from "@react-pdf/renderer";
+import Container from "../components/Container";
 import Row from "../components/Row";
-import useLocalization from "../hooks/localization";
+import Section from "../components/Section";
 import sections from "../data/sections";
 import workingExperiences from "../data/working-experiences";
+import useLocalization from "../hooks/localization";
+import { mainStyles } from "../lib/style";
 
 const styles = StyleSheet.create({
   experienceContainer: {
@@ -35,12 +36,6 @@ const styles = StyleSheet.create({
     color: "#666",
     marginBottom: "8px",
   },
-  experienceDescriptionContainer: {
-    color: "#333",
-    fontWeight: "medium",
-    fontSize: "9px",
-    marginBottom: "8px",
-  },
   experienceDescription: {
     marginBottom: "4px",
   },
@@ -50,13 +45,6 @@ const styles = StyleSheet.create({
     fontSize: "9px",
     color: "#333",
     flex: "1 1 1",
-  },
-  projectSkills: {
-    fontStyle: "italic",
-    color: "#417E38",
-    fontSize: "8px",
-    marginTop: "4px",
-    paddingLeft: "10px",
   },
 });
 
@@ -82,7 +70,7 @@ export default function Experiences() {
               </Link>
             </Row>
             <Text style={styles.experiencePeriod}>{l(experience.period)}</Text>
-            <View style={styles.experienceDescriptionContainer}>
+            <View style={mainStyles.sectionDescription}>
               {l(experience.descriptions).map((description, index) => (
                 <Text key={index} style={styles.experienceDescription}>
                   {description}
@@ -100,7 +88,7 @@ export default function Experiences() {
                       <Text>{l(project.description)}</Text>
                     </View>
                   </Row>
-                  <Text style={styles.projectSkills}>
+                  <Text style={mainStyles.tag}>
                     {project.skills.join(", ")}
                   </Text>
                 </View>

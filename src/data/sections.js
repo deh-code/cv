@@ -27,4 +27,8 @@ export default {
     en: "Certificates and Results",
     it: "Certificati e Riconoscimenti",
   },
+  technicalTags: {
+    en: "Technical tags",
+    it: "Tags tecnici",
+  },
 };
