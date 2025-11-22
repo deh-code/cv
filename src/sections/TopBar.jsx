@@ -15,7 +15,6 @@ import Languages from "./Languages";
 const styles = StyleSheet.create({
   main: {
     paddingHorizontal: "12px",
-    gap: "12px",
   },
   content: {
     paddingBottom: "16px",
