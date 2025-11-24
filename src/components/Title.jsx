@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const styles = StyleSheet.create({
   main: (style) => ({
-    fontSize: "16px",
+    fontSize: "12px",
     fontWeight: "bold",
     ...style,
   }),

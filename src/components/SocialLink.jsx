@@ -1,4 +1,4 @@
-import { Link, Image, Text, StyleSheet } from "@react-pdf/renderer";
+import { Image, Link, StyleSheet, Text } from "@react-pdf/renderer";
 import PropTypes from "prop-types";
 
 const styles = StyleSheet.create({
@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    fontSize: "11px",
+    fontSize: "8px",
     fontWeight: "medium",
     color: "black",
     textDecoration: "none",

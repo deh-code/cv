@@ -1,14 +1,14 @@
-import Container from "../components/Container";
-import Section from "../components/Section";
-import Title from "../components/Title";
-import Chip from "../components/Chip";
-import Row from "../components/Row";
-import Icon from "../components/Icon";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { StyleSheet, View } from "@react-pdf/renderer";
+import Chip from "../components/Chip";
+import Container from "../components/Container";
+import Icon from "../components/Icon";
+import Row from "../components/Row";
+import Section from "../components/Section";
+import Title from "../components/Title";
+import sections from "../data/sections";
 import skills from "../data/skills";
 import useLocalization from "../hooks/localization";
-import sections from "../data/sections";
 
 const styles = StyleSheet.create({
   main: {
@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
     paddingBottom: "4px",
   },
   skillBoxIcon: { marginRight: "8px" },
-  skillBoxTitle: { fontStyle: "italic", fontSize: "14px" },
-  skillChip: { margin: "0 6px 6px 0" },
+  skillBoxTitle: { fontStyle: "italic", fontSize: "12px" },
+  skillChip: { margin: "0 4px 4px 0" },
 });
 
 export default function Skills() {
@@ -44,7 +44,7 @@ export default function Skills() {
               <Row style={styles.skillBoxHeader}>
                 <Icon
                   faIcon={skill.icon}
-                  width={skill.iconWidth || "16px"}
+                  width={skill.iconWidth || "14px"}
                   style={styles.skillBoxIcon}
                 ></Icon>
                 <Title style={styles.skillBoxTitle}>{l(skill.title)}</Title>

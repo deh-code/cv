@@ -9,11 +9,11 @@ export default function Icon({ faIcon, style = {}, fill, width }) {
   const { icon } = faIcon;
   const duotone = Array.isArray(icon[4]);
   const paths = Array.isArray(icon[4]) ? icon[4] : [icon[4]];
-  style.width = width || style.width || "16px";
+  const computedStyle = { ...style, width: width || style.width || "14px" };
   const color = fill || style.color || "black";
 
   return (
-    <Svg viewBox={`0 0 ${icon[0]} ${icon[1]}`} style={style}>
+    <Svg viewBox={`0 0 ${icon[0]} ${icon[1]}`} style={computedStyle}>
       {paths &&
         paths.map((d, index) => (
           <Path

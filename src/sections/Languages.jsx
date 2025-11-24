@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
     marginRight: "4px",
   },
   headerTitle: {
-    fontSize: "14px",
     marginBottom: "8px",
   },
   languageContainer: {

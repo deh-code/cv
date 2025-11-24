@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "@react-pdf/renderer";
-import useLocalization from "../hooks/localization";
 import bio from "../data/bio";
+import useLocalization from "../hooks/localization";
 
 const styles = StyleSheet.create({
   main: {

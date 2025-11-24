@@ -9,7 +9,8 @@ import useLocalization from "../hooks/localization";
 
 const styles = StyleSheet.create({
   experienceContainer: {
-    fontSize: "11px",
+    fontSize: "10px",
+    marginBottom: "8px",
   },
   experienceHeader: {
     marginBottom: "4px",
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
   },
   experienceRole: {
     fontWeight: "bold",
-    fontSize: "12px",
+    fontSize: "10px",
   },
   experienceRoleSeparator: { margin: "0 2px 0 4px", fontWeight: "bold" },
   companyLink: {
@@ -26,16 +27,13 @@ const styles = StyleSheet.create({
   },
   companyName: {
     fontWeight: "bold",
-    fontSize: "12px",
+    fontSize: "10px",
   },
   experiencePeriod: {
-    fontSize: "10px",
+    fontSize: "8px",
     fontStyle: "italic",
     fontWeight: "semibold",
     color: "#666",
-    marginBottom: "8px",
-  },
-  experienceDescription: {
     marginBottom: "4px",
   },
   achievementsContainer: { marginBottom: "4px" },
@@ -52,11 +50,7 @@ export default function Experiences() {
 
   return (
     <Container>
-      <Section
-        title={l(sections.workingExperiences)}
-        icon={faBuilding}
-        iconWidth="14px"
-      >
+      <Section title={l(sections.workingExperiences)} icon={faBuilding}>
         {workingExperiences.map((experience, index) => (
           <View
             wrap={false}

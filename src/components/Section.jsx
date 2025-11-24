@@ -1,12 +1,12 @@
 import { StyleSheet, View } from "@react-pdf/renderer";
 import PropTypes from "prop-types";
-import Title from "./Title";
-import Row from "./Row";
 import Icon from "./Icon";
+import Row from "./Row";
+import Title from "./Title";
 
 const styles = StyleSheet.create({
   main: (style) => ({
-    marginBottom: "32px",
+    marginBottom: "24px",
     ...style,
   }),
   headerContainer: {
@@ -18,10 +18,10 @@ const styles = StyleSheet.create({
     alignItems: "baseline",
   },
   headerIcon: {
-    marginRight: "8px",
+    marginRight: "6px",
   },
   headerTitle: {
-    fontSize: "16px",
+    fontSize: "14px",
     transform: "translate(0, 4px)",
   },
 });
@@ -30,7 +30,7 @@ export default function Section({
   style = {},
   title,
   icon,
-  iconWidth = "20px",
+  iconWidth = "14px",
   children,
 }) {
   return (

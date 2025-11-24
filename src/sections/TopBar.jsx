@@ -13,12 +13,8 @@ import Education from "./Education";
 import Languages from "./Languages";
 
 const styles = StyleSheet.create({
-  main: {
-    paddingHorizontal: "12px",
-  },
   content: {
-    paddingBottom: "16px",
-    marginBottom: "16px",
+    marginBottom: "10px",
     alignItems: "flex-start",
   },
   headerTitle: {
@@ -41,7 +37,7 @@ const styles = StyleSheet.create({
   },
   contactsContainer: {
     marginBottom: "10px",
-    fontSize: "10px",
+    fontSize: "8px",
     color: "#666",
   },
   contact: { marginBottom: "2px" },
@@ -69,7 +65,7 @@ const links = [
 export default function TopBar() {
   const l = useLocalization();
   return (
-    <Container style={styles.main}>
+    <Container>
       <View style={styles.content}>
         <Row>
           <View style={styles.profileImageContainer}>

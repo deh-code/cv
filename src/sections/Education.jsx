@@ -15,11 +15,10 @@ const styles = StyleSheet.create({
     marginRight: "4px",
   },
   headerTitle: {
-    fontSize: "14px",
     marginBottom: "8px",
   },
   educationHeader: {
-    fontSize: "9px",
+    fontSize: "8px",
     marginBottom: "4px",
   },
   educationTitle: {
@@ -35,7 +34,7 @@ const styles = StyleSheet.create({
   },
   educationLocation: {
     fontWeight: "semibold",
-    fontSize: "9px",
+    fontSize: "8px",
     color: "#666",
     fontStyle: "italic",
   },

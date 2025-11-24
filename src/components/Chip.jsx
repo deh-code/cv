@@ -1,9 +1,9 @@
-import { View, Text, StyleSheet } from "@react-pdf/renderer";
+import { StyleSheet, Text, View } from "@react-pdf/renderer";
 import PropTypes from "prop-types";
 
 const styles = StyleSheet.create({
   main: (style) => ({
-    padding: "4px 8px",
+    padding: "3px 4px",
     backgroundColor: "#417E38",
     color: "white",
     borderRadius: "4px",
@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     ...style,
   }),
   content: {
-    fontSize: "10px",
+    fontSize: "8px",
   },
 });
 

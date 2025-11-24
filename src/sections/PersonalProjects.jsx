@@ -1,11 +1,11 @@
 import { faFileCode } from "@fortawesome/free-solid-svg-icons";
+import { Link, StyleSheet, Text, View } from "@react-pdf/renderer";
 import Container from "../components/Container";
 import Section from "../components/Section";
-import { Link, StyleSheet, Text, View } from "@react-pdf/renderer";
 import Title from "../components/Title";
-import useLocalization from "../hooks/localization";
-import sections from "../data/sections";
 import personalProjects from "../data/personal-projects";
+import sections from "../data/sections";
+import useLocalization from "../hooks/localization";
 
 const styles = StyleSheet.create({
   content: {
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     textDecoration: "none",
   },
   projectTitle: {
-    fontSize: "12px",
+    fontSize: "10px",
   },
 });
 
@@ -30,11 +30,7 @@ export default function PersonalProjects() {
 
   return (
     <Container>
-      <Section
-        title={l(sections.personalProjects)}
-        icon={faFileCode}
-        iconWidth="14px"
-      >
+      <Section title={l(sections.personalProjects)} icon={faFileCode}>
         <View style={styles.content}>
           {personalProjects.map((project, index) => (
             <View

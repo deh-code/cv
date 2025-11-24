@@ -1,11 +1,11 @@
 import { faAward } from "@fortawesome/free-solid-svg-icons";
+import { Link, StyleSheet, Text, View } from "@react-pdf/renderer";
 import Container from "../components/Container";
 import Section from "../components/Section";
-import { Link, StyleSheet, Text, View } from "@react-pdf/renderer";
 import Title from "../components/Title";
-import useLocalization from "../hooks/localization";
-import sections from "../data/sections";
 import certifications from "../data/certifications";
+import sections from "../data/sections";
+import useLocalization from "../hooks/localization";
 
 const styles = StyleSheet.create({
   content: {
@@ -30,11 +30,7 @@ export default function PersonalProjects() {
 
   return (
     <Container>
-      <Section
-        title={l(sections.certifications)}
-        icon={faAward}
-        iconWidth="14px"
-      >
+      <Section title={l(sections.certifications)} icon={faAward}>
         <View style={styles.content}>
           {certifications.map((certification, index) => (
             <View

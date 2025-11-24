@@ -12,10 +12,8 @@ import { LocaleContext } from "./App";
 import { loadFonts } from "./lib/font";
 import Certifications from "./sections/Certifications";
 import Experiences from "./sections/Experiences";
-import OpenSource from "./sections/OpenSource";
 import PersonalProjects from "./sections/PersonalProjects";
 import Skills from "./sections/Skills";
-import TechnicalTags from "./sections/TechnicalTags";
 
 loadFonts();
 
@@ -30,12 +28,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     display: "flex",
     fontFamily: "openSans",
-    paddingVertical: "20px",
-  },
-  header: {
-    backgroundColor: "#313c4e",
-    paddingVertical: "24px",
-    color: "white",
+    paddingVertical: "10px",
   },
 });
 
@@ -47,7 +40,7 @@ export default function CV() {
       <Document>
         <LocaleContext.Provider value={locale}>
           <Page size="A4" style={styles.page}>
-            <View style={styles.sidebar}>
+            <View>
               <TopBar></TopBar>
             </View>
             <View style={styles.content}>
@@ -61,13 +54,7 @@ export default function CV() {
                 <PersonalProjects></PersonalProjects>
               </View>
               <View>
-                <OpenSource></OpenSource>
-              </View>
-              <View>
                 <Certifications></Certifications>
-              </View>
-              <View>
-                <TechnicalTags></TechnicalTags>
               </View>
             </View>
           </Page>

@@ -8,8 +8,8 @@ export default {
     it: "Esperienze Professionali",
   },
   personalProjects: {
-    en: "Personal Projects",
-    it: "Progetti Personali",
+    en: "Projects and Contributions",
+    it: "Progetti e Contributi",
   },
   education: {
     en: "Education",
@@ -18,10 +18,6 @@ export default {
   languages: {
     en: "Languages",
     it: "Lingue",
-  },
-  openSource: {
-    en: "Open Source Contributions",
-    it: "Contributi all'Open Source",
   },
   certifications: {
     en: "Certificates and Results",
